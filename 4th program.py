@@ -1,16 +1,10 @@
-m,n,i,j,flag=0,0,0,0,0
-m = input("Enter from : ")
-n = input("Enter to : ")
-# Print display message
-print("Prime numbers between", n, "and",
-      m, "are:", end="")
-for i in range(m, n +1):
-    if ( i == 1 ):
-        continue
-    flag=1;
-    for j in range(2,i // 2+1):
-        if(i % j == 0):
-            flag=0
+num=int(input("Enter a numebr : "))
+if num > 1:
+    for i in range(2,num):
+        if(num % i ) == 0:
+            print(num," not a prime number")
             break
-    if (flag == 1):
-        print(i, end=" ")
+        else:
+            print(num," is a prime number ")
+else:
+    print(num," is not a prime number ")
